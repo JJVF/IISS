@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="miaplicacion">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>SAL DE FIESTA</title>
+        <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/freelancer.css" rel="stylesheet">
+        <link href="css/estilo.css" rel="stylesheet"/>
+        <!-- Google Maps -->
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+            type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+            rel="stylesheet" type="text/css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+            rel="stylesheet" type="text/css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> <!--[if lt IE 9]--> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <!--[endif]--> </head>
+        
+        <body id="page-top" class="index">
+        
+            <!-- Navigation --> <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display --> <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">SAL DE FIESTA</a>
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling --> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <!-- La clase page-scroll se utiliza para generar el desplazamiento suave que se produce al pinchar en los enlaces del nav --> <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Discotecas</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#fiestas">Fiestas</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#actuaciones">Actuaciones</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#mapa">Cómo llegar</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Mail list</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse --> </div><!-- /.container-fluid --> </nav>
+        
+            <!--Esta seccion se encarga de que se vean las imagenes en el Slider--> <section id="home" class="text-center">
+        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Se cargan los diferentes items dentro del slider --> <div class="item active">
+                    <img src="./img/Slider/sl1.jpg" alt=""/>
+                    <div class="carousel-caption">
+                        <h4 class="back-light">Terraza Bereber</h4>
+                    </div>
+                    </div>
+                <div class="item">
+                    <img src="./img/Slider/2.jpg" alt=""/>
+                    <div class="carousel-caption ">
+                        <h4 class="back-light">Zona VIP Makao</h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./img/Slider/3.jpg" alt=""/>
+                    <div class="carousel-caption ">
+                        <h4 class="back-light">Discoteca Kapote</h4>
+                    </div>
+                </div>
+            </div>
+        
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example" data-slide-to="1"></li>
+                <li data-target="#carousel-example" data-slide-to="2"></li>
+            </ol>
+        </div>
+                
+        <!-- Left and right controls --> <a class="left carousel-control" href="#carousel-example" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+            </section><!--/.SLIDESHOW END--> <!-- Discotecas Grid Section --> <!--En esta seccion se ponen las 6 fotos de la seccion discotecas las cuales son cargadas desde un fichero JSON con un bucle gracias a AngularJS--> <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Discotecas</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <!-- Indicamos cual sera el controlador AngularJS que se encargue del trabajo --> <div class="row" ng-controller="CargarDiscotecas_JSON">
+                <!-- Creamos un bucle en el que todos los elementos de data pasaran a item y asi se podran usar en la parte Html --> <div class="col-sm-4 portfolio-item" ng-repeat="item in data">
+                    <a href= {{item.Modal}} class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src= {{item.Imagenes}} class="img-responsive" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+            </section>
+        
+            <!-- Fiestas Section --> <!--En esta seccion se cargan las imagenes de la seccion fiestas las cuales son cargadas desde la base de datos con un bucle gracias a AngularJS--> <section class="success" id="fiestas">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Fiestas de Jerez</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <!-- Indicamos cual sera el controlador AngularJS que se encargue del trabajo --> <div class="row" ng-controller="CargarFiestas">
+                <!-- Creamos un bucle en el que todos los elementos de img pasaran a item y asi se podran usar en la parte Html --> <div class="col-sm-4 portfolio-item" ng-repeat="item in img">
+                    <a href= {{item.Modal}} class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src= {{item.Imagenes}} class="img-responsive" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+            </section>
+            
+            <!-- Actuaciones --> <!--En esta seccion se cargan las imagenes de la seccion actuaciones las cuales son cargadas desde un JSON hecho en codigo con un bucle gracias a AngularJS--> <section id="actuaciones">
+        <div class="text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Actuaciones</h2>
+                        <hr class="star-primary">
+                    </div>
+                    <!-- Indicamos cual sera el controlador AngularJS que se encargue del trabajo --> <div class="row" ng-controller="CargarActuaciones_JSON">
+                        <!-- Creamos un bucle en el que todos los elementos de img pasaran a item y asi se podran usar en la parte Html --> <div class="col-sm-4 portfolio-item" ng-repeat="item in data">
+                            <a href= {{item.Modal}} class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src= {{item.Imagenes}} class="img-responsive" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </section>
+            
+            
+            <!-- Como llegar Section --> <section class="success" id="mapa">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Cómo llegar</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <!-- Con iframe cargamos una parte de la web de google maps la cual esta dirigida con unas coordenadas previamente cargadas mediante la url --> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12796.950922123293!2d-6.120567949413776!3d36.692824824991845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0d0dc695429e86bb%3A0x74b54ce7b9ab6b97!2sCalle+Zaragoza%2C+Jerez+de+la+Frontera%2C+C%C3%A1diz!5e0!3m2!1ses!2ses!4v1421855376344" width="1000" height="600" style="border:0"></iframe>
+            </div>
+        </div>
+            </section>
+            
+            <!-- Mail List Section --> <!-- En esta seccion guardamos los datos del formulario dentro de la base de datos --> <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Mail List</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <!-- Indicamos cual sera el controlador que se va a usar y que funcion en concreto cuando pulsemos en el boton registrar --> <div class="col-lg-8 col-lg-offset-2" ng-controller="ExampleController" ng-submit="add(user)">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Nombre</label>
+                                <input type="text" class="form-control" placeholder="Nombre" id="name" required data-validation-required-message="Por favor introduce tu nombre." ng-model="user.name">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Apellidos</label>
+                                <input type="text" class="form-control" placeholder="Apellidos" id="name" required data-validation-required-message="Por favor introduce tus apellidos." ng-model="user.apellido">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Direccion Email</label>
+                                <input type="email" class="form-control" placeholder="Direccion Email" id="email" required data-validation-required-message="Por favor introduce tu email." ng-model="user.email">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg" ng-click="update(user)">Registrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+            </section>
+        
+        
+            <!-- Footer --> <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Localización</h3>
+                        <p>Escuela Superior de Ingeniería, Campus de Puerto Real</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Redes Sociales</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Desarrolladores</h3>
+                       
+                        <ul>
+                            <li>
+                                <a style ="color:#fff" href=“mailto:emilio.bellovillanueva@alumn.uca.es>Emilio Bello</a>
+                            </li>
+                            <li>
+                                <a style ="color:#fff" href=“mailto:marta.jimenezcordon@alumn.uca.es>Marta Jiménez</a>
+                            </li>
+                            <li>
+                                <a style ="color:#fff" href=“mailto:jesus.vidalflorindo@alum.uca.es>Jesús Vidal </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Emilio Bello / Marta Jiménez /Jesús Vidal
+                    </div>
+                </div>
+            </div>
+        </div>
+            </footer>
+        
+            <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) --> <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+            </div>
+        
+            <!-- Discotecas Modals --> <!--En esta seccion se carga la información dentro de cada apartado de discoteca --> <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Bereber</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/bere1.jpg" class="img-responsive img-centered" alt="">
+                            <p>Discoteca, cafetería, patios árabes, zonas vips... diferentes ambientes, buena música y diversión de la noche Jerezana. Apertura Noviembre 2014</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Buda Bar</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/buda2.jpg" class="img-responsive img-centered" alt="">
+                            <p>En Buda Bar te ofrecemos un sin fin de posibilidades para que salir a despejarte no te cueste tanto!!Bonocopas, Botellas en promoción, Cupcakes, Cubos de cerveza y tinto... Todo esto y mucho más en un ambiente inigualable, un lugar único para disfrutarlo todo el mundo!!</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>La Galeria Premium Club</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/galefiesta.jpg" class="img-responsive img-centered" alt="">
+                            <p>La Galeria Premium Club es la discoteca más grande de la provincia de Cádiz, formada por un gran equipo de Gogos, Djs, espectaculos...</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Iroko</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/iro.jpg" class="img-responsive img-centered" alt="">
+                            <p>Iroko Lounge bar, la mejor música y ambiente en la avenida principal de Jerez. Disfruta de nuestra acogedora terraza para un café o tu copa preferida</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Kapote</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/kapo.jpg" class="img-responsive img-centered" alt="">
+                            <p>En la Avenida con más historia y prestigio de Jerez rodeado de los más selectos hoteles, restaurantes y locales de copas se encuentra Kapote Kafé Kopas Jerez en el edificio la Yeguada en la Avenida Álvaro Domecq. Desde las cuatro de la tarde ofrecemos a nuestros amigos un nuevo sentido para pasar de la tarde a la noche sin que estas parezcan encontrar su final</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Makao</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/mak.jpg" class="img-responsive img-centered" alt="">
+                            <p>Disponemos de dos salas completamente diferentes con dos estilos en las que lo pasaras en grande</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        
+            <!--Actuaciones Modal--> <!--En esta sección se carga la información en cada uno de los apartados de actuaciones --> <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Carnaval</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/carna2.jpg" class="img-responsive img-centered" alt="">
+                            <h4><b>La Bailaora María del Mar Moreno será Pregonera de la fiesta, Manuel Algeciras González , se le entregará este año la Insignia de Honor, Moisés Ruiz será Pregonero del Dios Baco</b></h4>
+                            <h4>Sábado 7 de febrero</h4>
+                            <p>A las 20.30 horas en el Teatro Villamarta será el pregón del Carnaval a cargo de María del Mar Moreno y la entrega de la Insignia de Honor a Manuel Algeciras.</p>
+                            <h4>Domingo 8 de febrero</h4>
+                            <p>A las 13 horas, en la Sala Paúl convivencia de Agrupaciones Carnavalescas</p>
+                            <h4>Jueves, 12 de febrero.</h4>
+                            <p>A las 10.00 horas, Pasacalle del Concurso Escolar de Disfraces por el centro de Jerez con salida desde la Plaza del Banco y llegada al patio de San Fernando del Alcázar, dentro del programa Carnaval en la Escuela</p>
+                            <p>A las 20.30 horas, certamen provincial de cuplés “Selu Dormido” en la Plaza Canterbury</p>
+                            <h4>Viernes 13 de febrero</h4>
+                            <p>En el Centro Blas Infante, dentro del horario escolar, habrá la Gran Gala de Entrega de Premios del Carnaval en la Escuela, dentro del programa Carnaval en la Escuela</p>
+                            <h4>Sábado 14 de febrero</h4>
+                            <p>A las 18.30 horas, Gran Cabalgata del Humor dedicada a San Valentín. Itinerario por el centro de Jerez con salida a la calle Muro y llegada al patio San Fernando del Alcázar.</p>
+                            <p>A las 21.00 horas, Fiesta del Carnaval en El Alcázar, con la entrega de premios a los mejores disfraces de la cabalgata, música yorquesta, actuaciones de agrupaciones carnavalescas.</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>El Barrio</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/barrio2.jpg" class="img-responsive img-centered" alt="">
+                                <audio src="musica.mp3" controls></audio>
+                            <h4>El Palacio Municipal de Deportes de Jerez acogerá el concierto que ofrecerá “El Barrio” el próximo 7 de febrero de 2015</h4>
+                            <p>Las entradas están a la venta desde 30€. El Barrio ha actuado en Jerez de la Frontera en 3 ocasiones, la última vez que actuó en Jerez de la Frontera fue en 2012 en la sala Palacio Municipal de Deportes de Chapín.</p>
+                            <p>Para comprar tus entradas haga click en el siguiente<a href="https://www.ticketmaster.es/nav/es/musica/giras/entradas-el-barrio/index.html?q=el%20barr&t=fast"> aquí</a></p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Festival de Jerez</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/festival.jpg" class="img-responsive img-centered" alt="">
+                            <iframe width="640" height="360" src="//www.youtube.com/embed/CklXLAvSIyc?feature=player_detailpage" allowfullscreen></iframe>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            
+            <!--Fiestas modals--> <!--En esta sección se carga la información en cada uno de los apartados de fiestas --> <div class="portfolio-modal modal fade" id="portfolioModa20" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Semana Santa 2015</h2>
+                            <hr class="star-primary">
+                            <img src="img/Fiestas/gente.jpg" class="img-responsive img-centered" alt="">
+                            <p>La Semana Santa en Jerez es el acontecimiento religioso más importante de la ciudad</p>
+                            <p>Se celebra anualmente en la semana del primer plenilunio de la primavera y ha sido declarada de interés turístico nacional desde 1993 y está a la espera para que en 2015 sea declarada de Interés Turístico Internacional</p>
+                            <p>La Semana Santa de Jerez es una de las más importantes de Andalucía en lo que a número de hermandades y a calidad en sus imágenes se refiere.</p>
+                            <p>Cuarenta y tres hermandades de penitencia, a las que también se suma la hermandad del Señor resucitado, llenan de contenido una semana, la que va del Sábado de Pasión al Domingo de Resurrección, en la que de nuevo cobran vigencia las raíces históricas de esta particular celebración.</p>
+                            <p>Para consultar el itinerario del 2015 pincha <a href="https://www.semanasantadejerez.com/">aquí</a></p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            <div class="portfolio-modal modal fade" id="portfolioModa21" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Feria del Caballo 2015</h2>
+                            <hr class="star-primary">
+                            <audio src="bragas.mp3" controls></audio>
+                            <div id="carousel-example2" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="./img/Fiestas/1.jpg" alt=""/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="./img/Fiestas/2.jpg" alt=""/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="./img/Fiestas/3.jpg" alt=""/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="./img/Fiestas/4.jpg" alt=""/>
+                                    </div>
+                                    <div class="item">
+                                        <img src="./img/Fiestas/5.jpg" alt=""/>
+                                    </div>
+                                </div>
+            
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example2" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example2" data-slide-to="2"></li>
+                                    <li data-target="#carousel-example2" data-slide-to="3"></li>
+                                    <li data-target="#carousel-example2" data-slide-to="4"></li>
+                                </ol>
+                            </div>
+                
+                            <p>La Feria del Caballo es una feria que se celebra cada mes de mayo en Jerez de la Frontera, declarada de Interés Turístico Internacional</p>
+                            <p>Durante las fiestas y entre semana desfilan caballos con sus jinetes que, como antaño, se siguen vendiendo. Durante toda la semana, sólo durante el día, hay un gran desfile de coches de caballos por las calles centrales</p>
+                            <p>La Feria cuenta actualmente con más de 250 casetas, cada una con su particular ambiente y especialidades gastronómicas</p>
+                            <p>La mayor parte de las casetas compiten en los concursos de mejor tapa y mejor decoración.</p>
+                            <p>Las bebidas típicas de la feria de Jerez son el oloroso y el vino fino, que los menos puristas gustan de mezclar este último con sodas de lima, combinación conocida como rebujito.</p>
+                            <p>La vestimenta diurna más habitual en Feria es el traje de corto, si se monta a caballo, y traje de gitana (o traje de flamenca) para las mujeres, y de media etiqueta durante la noche.</p>
+                                
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+            <!--</div>--> <div class="portfolio-modal modal fade" id="portfolioModa22" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>MotoGP 2015</h2>
+                            <hr class="star-primary">
+                            <iframe width="640" height="360" src="//www.youtube.com/embed/vAtMDPQGzNM?feature=player_detailpage" allowfullscreen></iframe>
+                            <p>El Circuito de Jerez es sede del Campeonato del Mundo de Motociclismo desde 1987, fecha del primer Gran Premio organizado en nuestras instalaciones</p>
+                            <p>Desde entonces y hasta nuestros días, el trazado jerezano es sede oficial y permanente del calendario deportivo del MotoGP, convirtiéndose por derecho propio en una de las pruebas más emblemáticas del campeonato por diversas razones, entre ellas, el especial ambiente que rodea a esta prueba con un peregrinar anual de miles de aficionados poblando cada una de las tribunas y pelousse del circuito para animar sin cesar a sus ídolos.</p>
+                            <img src="./img/Moto/gp.jpg" alt="">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        
+            <!-- jQuery --> <script src="js/jquery.js"></script>
+            
+            <!-- Bootstrap Core JavaScript --> <script src="js/bootstrap.min.js"></script>
+            
+            <!-- AngularJS --> <script src="js/angular/angular.js"></script>
+            <script src="js/angular/angular.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.js"></script>
+        
+            <!-- Plugin JavaScript --> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+            <script src="js/classie.js"></script>
+            <script src="js/cbpAnimatedHeader.js"></script>
+            <script src="js/jquery.prettyPhoto.js"></script>
+        
+            <!-- Contact Form JavaScript --> <script src="js/jqBootstrapValidation.js"></script>
+            <script src="js/contact_me.js"></script>
+        
+            <!-- Custom Theme JavaScript --> <script src="js/freelancer.js"></script>
+            <script src="js/custom.js"></script>
+            <script src="js/funciones.js"></script>
+            <script src="js/resource.js"></script>
+        </body>
+        </html><![endif]-->
