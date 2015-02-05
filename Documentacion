@@ -429,6 +429,7 @@ La petición se lanzó a más de 140 combinaciones plataforma-navegador.
 
     •	Pruebas unitarias
 
+
 Mediante Jasmine. 
  Las pruebas unitarias expuestas en su directorio correspondiente del repositorio están orientadas a las funciones js 
 relacionadas con el apartado gráfico; por ejemplo, que al colocar el cursor en determinado icono se rellene del color deseado.
@@ -437,7 +438,7 @@ relacionadas con el apartado gráfico; por ejemplo, que al colocar el cursor en 
 
     •	Pruebas EE
     
- Mediante Selenium.
+Mediante Selenium.
  El test E2E se encarga de testear la aplicación completa en un escenario del mundo real, como en la conexión con la base de
 datos, internet u otras aplicaciones. Se interactúa con nuestra página mediante un script, que contiene nuestras tareas a 
 realizar, tal como pulsar este botón, hacer login, etc.
