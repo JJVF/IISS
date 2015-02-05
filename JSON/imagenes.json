@@ -1,0 +1,8 @@
+[ 
+    {"Imagenes" :"img/portfolio/bereber.jpeg", "Modal" : "#portfolioModal1"},
+    {"Imagenes" :"img/portfolio/buda.jpg", "Modal" : "#portfolioModal2"},
+    {"Imagenes" :"img/portfolio/galeria.jpeg", "Modal" : "#portfolioModal3"},
+    {"Imagenes" :"img/portfolio/iroko.jpg", "Modal" : "#portfolioModal4"},
+    {"Imagenes" :"img/portfolio/kapote.jpg", "Modal" : "#portfolioModal5"},
+    {"Imagenes" :"img/portfolio/makao.jpeg", "Modal" : "#portfolioModal6"}
+]
