@@ -1,0 +1,448 @@
+DOCUMENTACIÓN "SALDEFIESTA"
+
+Marta Jiménez Cordón
+Emilio Bello Villanueva
+Jesús Javier Vidal Florindo
+
+________________________________________________________________________________________________________________________________
+
+ÍNDICE
+
+1.	Presentación
+2.	Planificación
+3.	Histórico de cambios
+   •	Primeros pasos
+   •	Consolidando el proyecto
+   •	Últimos aspectos
+4.	Elementos del proyecto
+5.	Diseño del proyecto
+   •	Preprocesador CSS
+   •	Framework de diseño
+6.	Persistencia
+   •	Definidos en ficheros
+   •	Definidos en el código
+   •	Ubicados en una base de datos
+7.	Despliegue
+8.	Validación & testingAngularJS
+   •	Pruebas de validación
+     1.	HTML
+     2.	CSS
+   •	Pruebas unitarias
+   •	Pruebas EE
+
+________________________________________________________________________________________________________________________________
+
+1.	PRESENTACIÓN
+
+
+   Bienvenido a la documentación del sitio web “Saldefiesta”, en este documento se recogen todos los aspectos tenidos en cuenta
+  a la hora de emprender la realización del sitio,  desde la planificación de sus desarrolladores hasta su validación mediante
+  diversos tests, pasando por el diseño del site así como la inclusión de sus elementos, y un largo etcétera. 
+  Este documento pretende también aclarar cualquier duda sobre el diseño, funcionalidad, modo de empleo o validez del sitio web.
+  Este proyecto en particular ha sido llevado adelante por:
+  
+    •	Emilio Bello Villanueva
+    •	Marta Jiménez Cordón
+    •	Jesús Javier Vidal Florindo
+
+    Cuyas intenciones originales fueron sacar adelante un sitio web útil, práctico, fácil de navegar y con cierto interés 
+  comercial : un portal donde poder ver, de forma actualizada, los mejores planes de ocio en la ciudad de Jerez de la Frontera
+  un día cualquiera; desde cualquier fiesta típica de barrio, a discotecas, fiestas regionales, etc. Quedando la opción a 
+  empresas relacionadas con el ocio en la ciudad de Jerez a registrarse en la web con el fin de publicitarse a todos 
+  los usuarios de la misma.
+
+
+
+
+
+________________________________________________________________________________________________________________________________
+
+2.	PLANIFICACIÓN
+
+
+  En un principio, lo consensuado era establecer un reparto tal que cada integrante pueda participar en cada aspecto de la
+realización del proyecto, puede que no dominando un tema, pero sí sabiendo ayudar activamente en cualquiera. 
+  Sin embargo, finalmente hubo diferencias entre lo planificado/esperado y lo ocurrido, lo que trastocó un poco la
+planificación, pero no hacía peligrar en ningún momento la integridad o la entrega del proyecto.
+
+  Así que, finalmente, contando con que el apoyo entre compañeros iba a ser crucial, se identificaron y repartieron diversos 
+tipos de tareas relacionados con el proyecto, delegando a cada integrante el papel de “responsable”
+en sus propias tareas adjudicadas, tratando de hacerlo de una forma equitativa; quedando de esta guisa las responsabilidades 
+de cada integrante:
+
+•	Marta : Esqueleto HTML – Responsive Design – Diseño Web – Contenido Web
+•	Jesús : Documentación – Validación & testingAngularJS  –  GitHub 
+•	Emilio : AngularJS – JSON – Base de Datos – Despliegue
+•	Todos : Hoja de estilos 
+
+  Para ello, se establecieron unas pautas para poder trabajar tanto en clase, quedando entre nosotros, como en casa; mediante
+uso de redes sociales, el repositorio en GitHub, el entorno integrado de desarrollo Cloud9, etc.
+
+  Una vez realizado el reparto de responsabilidades, sólo quedaba tratar de plantear un cronograma aplicable a 
+nuestro proyecto en el tiempo que teníamos:
+
+                          SEMANA                            	ASPECTO A REALIZAR/INTEGRANTE
+                          
+                          
+	                          1                                 Esqueleto HTML/Marta
+	                                                            Primera hoja de estilos/Todos
+	                                                            Documentación/Jesús
+	                                                            
+	                          2                                 Contenido Web/Marta
+	                          
+	                          3                                 Conexión con base de datos/Marta
+	                                                            Adición de ficheros JSON/Emilio
+	                                                            Angularjs/Emilio
+	                                                            Responsive Design/Marta
+	                                                            Documentación y control de versiones/Jesús
+	                          
+	                          4                                 Uso de github/Jesús
+	                                                            Actualización de nuevos ficheros al proyecto/Jesús
+	                                                            
+	                                                            
+                            5                                 Validación&testing/Jesús
+                                                              Actualizar documentación/Jesús
+                                                              Repositorio y entrega final/Jesús
+
+
+ El framework de diseño será Bootstrap, los tests se realizarán con las herramientas Jasmine y Selenium y la conexión con la 
+base de datos se realizará mediante el sistema MongoDB.
+
+ Así mismo, se estableció que la información estaría subida en GitHub o cualquier otra herramienta para mejorar el trabajo en
+grupo, aun no habiendo nunca utilizado esta herramienta por parte de ninguno de los integrantes.
+
+ A continuación el enlace al repositorio donde están almacenados todos los ficheros del proyecto:
+
+https://github.com/JJVF/IISS
+
+ El despliegue del sistema se tenía pensado que fuese mediante la plataforma Heroku, pero ante la dificultad que entrañaba su
+utilización y el tiempo que debía de invertirse para dominar la plataforma, se prefirió optar por un despliegue en un servidor
+tradicional, ya que al no necesitar de tablas de bases de datos gracias a MongoLab, simplifica mucho la elección de un servidor
+e incluso un futuro cambio de este.
+
+ Ésta es la URL donde se encuentra desplegado el proyecto:
+
+http://saldefiesta.hol.es/
+
+
+
+
+
+________________________________________________________________________________________________________________________________
+
+3.	HISTÓRICO DE CAMBIOS
+
+
+    •	Primeros pasos
+
+      1.	Construcción del esqueleto HTML en el IDE Cloud9, en un proyecto compartido por los tres. Así mismo, se añade la
+    primera hoja de estilos.
+      2.	Adición de elementos a la web, como mail list, cabecera y pie, diferentes secciones, iconos, imágenes, más estilo.
+
+
+    •	Consolidando el proyecto
+
+      3.	Aplicación de Bootstrap y del preprocesador less, lo que añade un genial y renovado aspecto a la página.
+      4.	Problemas con la conexión con la base de datos.
+      5.	Adición de sliders a la cabecera de la web.
+      6.	Añadidos los ficheros JSON.
+      7.	Solucionado los problemas con la base de datos.
+      8.	Documentación actualizada.
+
+    •	Últimos aspectos
+    
+      9.	Problemas con GitHub, por desconocimiento de la herramienta.
+      10.	Aplicado Responsive Design.
+      11.	Añadido contenido a la Web sobre las distintas fiestas de Jerez de la Frontera.
+      12.	Creados y eliminados varios repositorios, por motivos de desconocimiento del manejo de la herramienta Github.
+      13.	Realización de las pruebas.
+      14.	A raíz  de las pruebas de validación, nuevas versiones del fichero index.html y estilo.css
+      15.	Automatización con Grunt sobre pruebas.
+      16.	Documentación actualizada a su última versión.
+      17.	Últimas versiones de ficheros añadidos al repositorio final para la entrega.
+
+
+
+
+________________________________________________________________________________________________________________________________
+
+4.	ELEMENTOS DEL PROYECTO
+
+
+ El proyecto debe de contemplar elementos tales como formularios, galerías, tablas, listas, etc.
+ 
+ A continuación, un listado-resumen con todos los elementos empleados e incluidos en la página web:
+
+•	SLIDERS EN CABECERA
+
+-El objetivo es captar la atención del usuario al ser lo primero que se ve y que le quede una imagen clara de qué trata la web. El slider esta realizado con la ayuda de Bootstrap, jquery y un plugin para jquery llamado jquery.petryphoto.
+
+
+•	SECCIONES CON VIDEOS & IMÁGENES
+
+-Dentro de los modales, dependiendo de la sección, podemos encontrar reproductores de videos/mp3 o imágenes junto con contenido
+de la sección.
+
+•	FORMULARIO MAIL LIST
+
+-La última sección de la web es un mail list, en el que los usuarios que quieran más información pueden inscribirse para 
+recibir correos. Esta sección funciona con AngularJS, Bootstrap y MongoDB.
+
+•	BARRA DE NAVEGACION
+
+-La barra de navegación proporciona una forma rápida de navegar por la web, si hacemos clic en una sección nos proporciona un
+desplazamiento suave hasta esa sección, lo cual es conseguido con el plugin cbpAnimatedHeader, que además de lo ya citado, nos
+permite que la barra se desplace cuando hacemos scroll en la web.
+
+•	GALERÍA
+
+-Pensada en una futura ampliación del proyecto en caso de poder rentarlo.
+
+•	MODALES
+
+-Cada una de las secciones está compuesta por varias imágenes, las cuales al hacer clic en ellas se abre un modal generado con
+Bootstrap y javascript.
+
+•	ICONOS REDES SOCIALES
+
+-Font Awesome es una fuente de iconos, es decir, en vez de caracteres posee iconos, los cuales están insertador en el pie de
+página para ahorrar espacio.
+
+•	INSERCIÓN DE GOOGLE MAPS
+
+-Increíblemente útil para el usuario común de la web, al poder localizarlo todo en la misma sección. Se genera con la etiqueta
+iframe de html, la cual permite insertar una url dentro de una sección de la web.
+
+•	FOOTER PRÁCTICO
+
+-Se ofrece información práctica sobre contacto, redes sociales en las que se encuentra la web y la licencia de la web.
+
+
+•	ENLACES ÚTILES Y ACORDES CON LA FINALIDAD DE LA WEB
+
+-Páginas principales de empresas de ocio
+-Mail a los desarrolladores
+
+•	ENLAZADO CON BASE DE DATOS
+
+MongoDB
+
+Usuario:          MartaJC
+Contraseña:    iiss2015  
+
+
+
+
+
+
+________________________________________________________________________________________________________________________________
+
+5.	DISEÑO DEL PROYECTO
+
+
+ Para romper con los típicos diseños de páginas estáticas que abren una nueva ventana cada vez que se hace click en una sección
+se decidió poner todo el contenido de la web en una sola pestaña.
+ Al poner todo el contenido en una sola página se evita estar abriendo pestañas continuamente cada vez que se quiera visualizar
+una sección haciéndole al usuario  una vista más fácil y ligera. Además con esto cumplimos con los últimos estándares de la 
+industria y usamos la filosofía de Angular JS.
+ Nada más abrir nuestra web lo primero que se puede visualizar es una galería de imágenes que resulta bastante llamativa ya que
+las imágenes van cambiando solas captando la curiosidad del usuario.
+
+Con este diseño decidimos encapsular cada tema en una sección.
+
+ A cada sección se le asigna un color, aunque la página sigue el mismo estilo de colores para no romper la estética.
+ Cada sección también cuenta con imágenes que actúan de iconos ofreciendo un aspecto más atractivo al usuario a diferencia del
+típico texto o enlace.
+ La barra de navegación en vez de pestañas desplegables se accede directamente a la sección que se quiera consultar.
+ También hemos añadido una sección Mail List donde se pueden registrar los usuarios almacenando su información en una base de
+datos.
+ En el pie de la página se añadió iconos a redes sociales, el nombre de los desarrolladores del proyecto y con un correo de 
+contacto. 
+ Viendo nuestro diseño y las nuevas tecnologías decidimos hacer nuestra web Responsive Desing, ya que hoy en día se puede 
+acceder a internet desde un Móvil, Tablet, PC… así que nuestra web en visible en cualquier plataforma.
+
+
+    •	Preprocesador CSS
+
+ Less, se usan tanto mixing como inheritance.
+Sus ficheros correspondientes, en la carpeta “less” del repositorio.
+
+
+    •	Framework de diseño
+
+Bootstrap 
+Plantillas utilizadas:
+http://startbootstrap.com/ 
+
+  Se emplea la fuente tipográfica “Font Awesome”, que es una fuente de iconos mediante la que se pueden insertar algunos iconos
+sociales y símbolos en lugar de imágenes, lo que resulta en una página más ligera. Sus ficheros se encuentran en el directorio
+correspondiente en el repositorio.
+
+
+
+
+
+________________________________________________________________________________________________________________________________
+
+6.	PERSISTENCIA
+
+
+•	Imágenes, Videos y Música:
+
+
+ Con el fin de conseguir un mayor atractivo audiovisual en la web, se optó desde su concepción por utilizar una amplia gama de
+recursos multimedia. 
+ Cada una de las secciones de la web, está compuesta por una serie de imágenes representativas, de modo que si se hace clic en
+esta imagen aparece un modal para ampliar información sobre la fiesta en particular. 
+ Cada modal contiene información y contenidos multimedia diferentes con respecto al resto, así pues por ejemplo el modal de
+“MotoGP” contiene un video enlazado directamente desde el portal Youtube o por ejemplo la sección de “Feria” contiene un
+reproductor mp3 donde al hacer play comienza una sevillana, muy buena por cierto.
+ Además de todo lo ya mencionado, en la portada de la web, se encuentra un Slider, el cual hace que varias imágenes se vayan
+pasando cada 5 segundos de manera automática, lo cual aporta un gran atractivo visual a la web, dinamismo y un mayor grado
+de profesionalidad.
+
+
+•	JSON definidos en ficheros:
+
+
+  Se optó por utilizar JSON con ficheros para almacenar la dirección de las imágenes de las diferentes secciones junto con el
+modal que corresponde a cada imagen. 
+  En principio puede parecer poco efectivo utilizar un archivo JSON que contenga la dirección de una imagen junto con su modal,
+pero nada más lejos de la realidad, ya que cada sección cuenta con varias imágenes, siendo la que más con 6 imágenes con sus
+respectivos modales y el código HTMLl era una y otra vez el mismo, lo cual propiciaba fallos, código de mala calidad y
+dificultad de mantenimiento. Se acabó finalmente por optar el uso de bucles con AngularJS, de manera que con tan solo unas
+pocas líneas y un JSON con la información, se repetía tantas veces como datos hubiese en el JSON, aumentando así un poco la
+complejidad en el código, pero haciendo infinitamente el código más corto y sencillo de mantener.
+
+ Gracias a esta técnica se ha de comentar que se consiguió reducir más de un 20% del total de líneas de código fuente.
+ El controlador de AngularJS empleado para esta técnica ha sido “CargarDiscotecas_JSON” el cual se encarga de cargar las
+imágenes junto con el modal de la sección “Discotecas”.
+
+
+
+•	JSON definidos en el código:
+
+
+ La utilización y filosofía de JSON en código es exactamente igual que los JSON definidos en ficheros, solo que esta vez se
+crea el JSON dentro del controlador AngularJS y se devuelve, de manera que sea el bucle el que navegue a través de cada uno 
+de los datos del código JSON.
+ El controlador de AngularJS empleado para esta técnica ha sido “CargarActuaciones_JSON” el cual se encarga de cargar las 
+imágenes junto con el modal de la sección “Actuaciones”.
+
+
+
+•	Utiliza JSON obtenidos de una base de datos:
+
+
+ En este caso, la filosofía es como en los casos anteriores, reducir el código HTML con el uso de bucles, pero esta vez la
+información no se encuentra en el mismo servidor que la web, sino que se encuentra en una base de datos alojada en MongoLab.
+ Se accede a toda la información de la colección de la “Imágenes” dentro de MongoLab a través de una función de AngularJS y 
+luego esta es mostrada por pantalla igual que si fuera un JSON.
+ El controlador de AngularJS empleado para esta técnica ha sido “CargarFiestas” el cual se encarga de cargar las imágenes junto
+con el modal de la sección “Fiestas”.
+
+
+
+
+
+
+________________________________________________________________________________________________________________________________
+
+7.	DESPLIEGUE
+
+
+    Para el despliegue de nuestra página web, como ya hemos mencionado antes, pensamos en la utilización de Heroku, pero como
+el uso de MongoLab nos facilita el uso de cualquier Hosting hemos optado por la utilización de Hostinger.
+  
+ La elección de Hostinguer y no otro hosting es muy sencilla, ya que Hostinguer nos permite que nuestro sitio web se vea sin 
+necesidad de añadir publicidad dentro de nuestra web además de soportar base de datos como MySQL por si en un futuro
+necesitáramos ampliar la funcionalidad de nuestra web.
+
+  Hostinguer nos ofrece además de suficiente trafico y un server de calidad, panel con diversas herramientas para poder 
+gestionar mas fácilmente  la web. Por ejemplo no se necesita crear una cuenta para un ftp, descargarlo y configurarlo, sino que
+dispone de uno online con el que hacer las subidas en cuestión de segundos. Además está en Español que ayuda a facilitar su 
+uso. 
+ Por tanto, tan solo con subir los archivos del proyecto a la cuenta Hostinguer, la web ya se encuentra online desde el primer
+momento, sin tener que hacer instalaciones o configuraciones de  más.
+
+
+Link de la web:
+http://saldefiesta.hol.es/
+
+
+
+
+
+
+________________________________________________________________________________________________________________________________
+
+8.	VALIDACIÓN & TESTING
+
+    • 	Pruebas de validación
+
+      1.	HTML
+
+Mediante el servicio de validación HTML de W3C:
+
+http://validator.w3.org/
+
+ Obtuvimos, con la última versión del fichero index.html, la friolera de 58 fallos de sintaxis, variables, etc. Tras un 
+refinamiento después de los primeros tests, se consiguen reducir, según la herramienta, a 21, que una vez revisados se 
+comprueban que no se tratan de ningún tipo de error, sólo que dicha herramienta no considera nuevos aspectos o no está 
+actualizada a la última versión como para reconocer todo lo que estamos aplicando de manera legal y sin fallos.
+ Por ejemplo, en la imagen añadida al repositorio podemos apreciar cómo considera un fallo la inclusión de la directiva "ngapp"
+en una etiqueta html, cuando en realidad esto no es así, sólo que no reconoce aspectos de angularjs.
+
+ Dicha información se recoge en su apartado correspondiente en el repositorio, así como algunos ejemplos de “fallos” que 
+alerta la herramienta sin serlos.
+
+Mediante la herramienta online “prettydiff “:
+
+http://prettydiff.com/
+
+  podemos aplicar la opción “beautify code” sobre el fichero index.html, lo que hace mucho más legible y vistoso el código, ya que elimina espacios, añade tabulado, etc.
+El resultado puede verse en su correspondiente apartado en el repositorio.
+
+
+
+      2.	CSS
+
+Mediante el servicio de validación CSS de W3C:
+
+https://jigsaw.w3.org/css-validator/
+
+ Conseguimos validar por completo la hoja de estilos, en concreto el fichero “estilo.css”, esto es, sin resultar ningún fallo,
+como se puede apreciar en la imagen correspondiente en el repositorio. 
+ Esto quiere decir que el documento se acoge al estándar planteado para, entre otras cosas, la sintaxis del lenguaje.
+
+
+
+    •	Pruebas en navegadores
+
+Con la herramienta en línea:
+http://browsershots.org/
+enviamos solicitudes de capturas de pantalla de nuestra web en distintos navegadores ubicados en distintas plataformas. La petición se lanzó a más de 140 combinaciones plataforma-navegador.
+
+
+
+    •	Pruebas unitarias
+
+Mediante Jasmine. 
+ Las pruebas unitarias expuestas en su directorio correspondiente del repositorio están orientadas a las funciones js 
+relacionadas con el apartado gráfico; por ejemplo, que al colocar el cursor en determinado icono se rellene del color deseado.
+ Se encuentran en el directorio correspondiente en el repositorio.
+
+
+    •	Pruebas EE
+    
+ Mediante Selenium.
+ El test E2E se encarga de testear la aplicación completa en un escenario del mundo real, como en la conexión con la base de
+datos, internet u otras aplicaciones. Se interactúa con nuestra página mediante un script, que contiene nuestras tareas a 
+realizar, tal como pulsar este botón, hacer login, etc.
+
+ En concreto, nuestro test se encarga de acceder a nuestro site, registrarse en el apartado “mail list” de la aplicación, y 
+navegar por ella mediante dos o tres acciones.
+
+Se encuentra en el repositorio en su directorio correspondiente.
+
+
