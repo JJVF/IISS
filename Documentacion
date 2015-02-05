@@ -86,7 +86,6 @@ nuestro proyecto en el tiempo que teníamos:
                           
 	                          1                                 Esqueleto HTML/Marta
 	                                                            Primera hoja de estilos/Todos
-	                                                            Documentación/Jesús
 	                                                            
 	                          2                                 Contenido Web/Marta
 	                          
@@ -96,13 +95,12 @@ nuestro proyecto en el tiempo que teníamos:
 	                                                            Responsive Design/Marta
 	                                                            Documentación y control de versiones/Jesús
 	                          
-	                          4                                 Uso de github/Jesús
-	                                                            Actualización de nuevos ficheros al proyecto/Jesús
+	                          4                                 Actualización de nuevos ficheros al proyecto/Jesús
 	                                                            
-	                                                            
-                            5                                 Validación&testing/Jesús
-                                                              Actualizar documentación/Jesús
-                                                              Repositorio y entrega final/Jesús
+                	          5                                 Validación&testing/Jesús
+                                                        	    Actualizar documentación y entrega final/Todos
+                                                        	    Repositorio final/Jesús
+
 
 
  El framework de diseño será Bootstrap, los tests se realizarán con las herramientas Jasmine y Selenium y la conexión con la 
@@ -135,8 +133,8 @@ ________________________________________________________________________________
 
     •	Primeros pasos
 
-      1.	Construcción del esqueleto HTML en el IDE Cloud9, en un proyecto compartido por los tres. Así mismo, se añade la
-    primera hoja de estilos.
+      1.	Construcción del esqueleto HTML en el IDE Cloud9, en un proyecto compartido por los tres. Así mismo, se añade 
+                la primera hoja de estilos.
       2.	Adición de elementos a la web, como mail list, cabecera y pie, diferentes secciones, iconos, imágenes, más estilo.
 
 
@@ -175,7 +173,8 @@ ________________________________________________________________________________
 
 •	SLIDERS EN CABECERA
 
--El objetivo es captar la atención del usuario al ser lo primero que se ve y que le quede una imagen clara de qué trata la web. El slider esta realizado con la ayuda de Bootstrap, jquery y un plugin para jquery llamado jquery.petryphoto.
+-El objetivo es captar la atención del usuario al ser lo primero que se ve y que le quede una imagen clara de qué trata la web.
+El slider esta realizado con la ayuda de Bootstrap, jquery y un plugin para jquery llamado jquery.petryphoto.
 
 
 •	SECCIONES CON VIDEOS & IMÁGENES
@@ -400,7 +399,8 @@ Mediante la herramienta online “prettydiff “:
 
 http://prettydiff.com/
 
-  podemos aplicar la opción “beautify code” sobre el fichero index.html, lo que hace mucho más legible y vistoso el código, ya que elimina espacios, añade tabulado, etc.
+  podemos aplicar la opción “beautify code” sobre el fichero index.html, lo que hace mucho más legible y vistoso el código, 
+  ya que elimina espacios, añade tabulado, etc.
 El resultado puede verse en su correspondiente apartado en el repositorio.
 
 
@@ -421,7 +421,9 @@ como se puede apreciar en la imagen correspondiente en el repositorio.
 
 Con la herramienta en línea:
 http://browsershots.org/
-enviamos solicitudes de capturas de pantalla de nuestra web en distintos navegadores ubicados en distintas plataformas. La petición se lanzó a más de 140 combinaciones plataforma-navegador.
+
+ Enviamos solicitudes de capturas de pantalla de nuestra web en distintos navegadores ubicados en distintas plataformas. 
+La petición se lanzó a más de 140 combinaciones plataforma-navegador.
 
 
 
