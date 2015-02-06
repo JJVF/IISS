@@ -89,13 +89,11 @@ nuestro proyecto en el tiempo que teníamos:
 	                                                            
 	                          2                                 Contenido Web/Marta
 	                          
-	                          3                                 Conexión con base de datos/Marta
+	                         3-4                               Conexión con base de datos/Marta
 	                                                            Adición de ficheros JSON/Emilio
 	                                                            Angularjs/Emilio
 	                                                            Responsive Design/Marta
 	                                                            Documentación y control de versiones/Jesús
-	                          
-	                          4                                 Actualización de nuevos ficheros al proyecto/Jesús
 	                                                            
                 	          5                                 Validación&testing/Jesús
                                                         	    Actualizar documentación y entrega final/Todos
@@ -423,7 +421,8 @@ Con la herramienta en línea:
 http://browsershots.org/
 
  Enviamos solicitudes de capturas de pantalla de nuestra web en distintos navegadores ubicados en distintas plataformas. 
-La petición se lanzó a más de 140 combinaciones plataforma-navegador.
+La petición se lanzó a más de 140 combinaciones plataforma-navegador, contando entre ellos los más populares como Google
+Chrome, internet explorer, mozilla firefox, y alguno más como Opera, Safari, Konqueror, etc.
 
 
 
@@ -433,7 +432,7 @@ La petición se lanzó a más de 140 combinaciones plataforma-navegador.
 Mediante Jasmine. 
  Las pruebas unitarias expuestas en su directorio correspondiente del repositorio están orientadas a las funciones js 
 relacionadas con el apartado gráfico; por ejemplo, que al colocar el cursor en determinado icono se rellene del color deseado.
- Se encuentran en el directorio correspondiente en el repositorio.
+Se encuentran en el directorio correspondiente en el repositorio.
 
 
     •	Pruebas EE
